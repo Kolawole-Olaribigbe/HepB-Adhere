@@ -1,0 +1,11 @@
+FastAPI
+uvicorn
+psycopg2-binary
+twilio
+redis
+celery
+pydantic
+alembic
+python-dotenv
+pytest
+httpx

@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend:/app
+    env_file:
+      - ./backend/.env.example
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - redis
+
+  frontend:
+    build:
+      context: ./frontend/web
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend/web:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: hepb_adherence
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+
+  redis:
+    image: redis:alpine
+
+volumes:
+  postgres_data:
