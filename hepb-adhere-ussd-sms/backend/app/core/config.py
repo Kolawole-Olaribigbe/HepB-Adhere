@@ -1,4 +1,6 @@
+from typing import Optional
 from pydantic import BaseSettings
+
 
 class Settings(BaseSettings):
     # Database configuration
@@ -14,7 +16,14 @@ class Settings(BaseSettings):
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
 
+    # Observability / logging
+    LOG_LEVEL: str = "INFO"
+    LOG_JSON: bool = False
+    SENTRY_DSN: Optional[str] = None
+    METRICS_ENABLED: bool = True
+
     class Config:
         env_file = ".env"
+
 
 settings = Settings()

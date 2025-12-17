@@ -107,3 +107,46 @@ Reach out via GitHub
 Email: kolawoleolari@outlook.com
 
 If you’re a policymaker, NGO, or clinician and want to pilot this system, let’s talk.
+
+## Observability & Reliability
+
+### Logging
+
+- Structured logging with `structlog` is configured for the backend. Toggle JSON output via the `LOG_JSON` environment variable and control verbosity via `LOG_LEVEL`.
+
+### Monitoring
+
+- Basic Prometheus metrics endpoint is available at `/metrics` when `METRICS_ENABLED` is true in the environment. You can scrape this endpoint with Prometheus and visualize via Grafana.
+
+### Error Tracking
+
+- Sentry integration is supported via the `SENTRY_DSN` environment variable (self-hosted or SaaS).
+
+## Development Tooling
+
+- Dependency management with `poetry` (see `pyproject.toml`).
+- Formatting and linting with `black` and `ruff`.
+- Tests with `pytest`.
+- Pre-commit hooks are provided in `.pre-commit-config.yaml` to run `black` and `ruff` automatically.
+
+## Repository Structure (recommended final layout)
+
+hbv-adhere/
+├── app/
+│   ├── api/
+│   ├── core/
+│   ├── db/
+│   ├── messaging/
+│   ├── services/
+│   └── main.py
+├── ml/
+│   ├── features/
+│   ├── models/
+│   ├── training/
+│   └── inference/
+├── dashboard/
+├── data/
+│   └── synthetic/
+├── docker/
+├── docs/
+└── README.md

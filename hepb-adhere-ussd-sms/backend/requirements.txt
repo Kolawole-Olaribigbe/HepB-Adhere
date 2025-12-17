@@ -9,3 +9,6 @@ alembic
 python-dotenv
 pytest
 httpx
+structlog
+prometheus-client
+sentry-sdk
