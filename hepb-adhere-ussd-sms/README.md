@@ -87,6 +87,23 @@ hepb-adhere-ussd-sms
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
-## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+🌍 Vision
+
+Drugs cure diseases. Systems deliver cures.
+
+HBV-Adhere aims to be a building block for hepatitis elimination, starting with adherence and extending to smarter delivery, monitoring, and policy decisions.
+
+📬 Contact
+
+Created as a public, impact-driven project.
+
+For collaboration, research, or deployment discussions:
+
+Open an issue
+
+Reach out via GitHub
+
+Email: kolawoleolari@outlook.com
+
+If you’re a policymaker, NGO, or clinician and want to pilot this system, let’s talk.
